@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "fd28c108-6217-4c38-a4ff-396fff8cd9e8",
+		"name": "NLW #2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Classes",
+			"item": [
+				{
+					"name": "Create class",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alef Felix\",\r\n    \"avatar\": \"https://avatars1.githubusercontent.com/u/15126865?s=460&u=06510e0c866c68de7e08565f7a8590eeeb854070&v=4\",\r\n    \"whatsapp\": \"11977604520\",\r\n    \"bio\": \"Trabalho há 5 anos como desenvolvedor Fullstack, me interesso muito pelo que a tecnologia proporciona e como ela muda o mundo a nossa volta. \",\r\n    \"subject\": \"Lógica de Programação\",\r\n    \"cost\": 100,\r\n    \"scheduled\": [{\r\n        \"week_day\": 1,\r\n        \"from\": \"8:00\",\r\n        \"to\": \"12:00\"\r\n    },{\r\n        \"week_day\": 3,\r\n        \"from\": \"10:00\",\r\n        \"to\": \"18:00\"\r\n    },{\r\n        \"week_day\": 4,\r\n        \"from\": \"8:00\",\r\n        \"to\": \"12:00\"\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/classes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List classes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/classes?week_day=1&subject=Lógica de Programação&time=11:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes"
+							],
+							"query": [
+								{
+									"key": "week_day",
+									"value": "1"
+								},
+								{
+									"key": "subject",
+									"value": "Lógica de Programação"
+								},
+								{
+									"key": "time",
+									"value": "11:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Connections",
+			"item": [
+				{
+					"name": "Create connections",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/connections",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"connections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List connections",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
